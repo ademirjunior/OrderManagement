@@ -1,4 +1,4 @@
-package com.ordermanagement.test;
+package com.ordermanagement;
 
 import java.util.Properties;
 

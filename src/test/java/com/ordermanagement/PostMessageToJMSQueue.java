@@ -1,4 +1,4 @@
-package com.ordermanagement.test;
+package com.ordermanagement;
 
 import javax.jms.Queue;
 import javax.jms.QueueConnection;
@@ -52,6 +52,7 @@ public class PostMessageToJMSQueue {
 		PostMessageToJMSQueue qs = new PostMessageToJMSQueue();
 		qs.init(context, JMS_QUEUE_NAME);
 		qs.send("Test message to the queue");
+		System.out.println("Message Posted");
 		
 	}
 }

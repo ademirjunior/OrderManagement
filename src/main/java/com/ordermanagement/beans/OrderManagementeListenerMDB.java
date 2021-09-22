@@ -4,6 +4,7 @@ import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 import javax.jms.Message;
 import javax.jms.MessageListener;
+import javax.jms.TextMessage;
 
 /**
  * Message-Driven Bean implementation class for: OrderManagementeListenerMDB
@@ -26,8 +27,12 @@ public class OrderManagementeListenerMDB implements MessageListener {
      * @see MessageListener#onMessage(Message)
      */
     public void onMessage(Message message) {
-        // TODO Auto-generated method stub
-        
+       TextMessage msg = (TextMessage) message;
+       try {
+		System.out.println("Message has benen received and the message content is: " + msg.getText());
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
     }
 
 }
